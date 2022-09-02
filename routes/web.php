@@ -21,9 +21,9 @@ use PhpParser\Node\Expr\FuncCall;
 |
 */
 
-// Route::get('/', function () {
-//     return view('welcome');
-// });
+Route::get('/', function () {
+    return view('login.view_login');
+});
 
 // Route::get('login',[LoginController::class,'index'])->name('login');
 Route::controller(LoginController::class)->group(Function(){

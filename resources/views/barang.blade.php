@@ -1,6 +1,5 @@
-@extends('beranda')
+@extends('layout')
 @section('content')
-
 
             @if (session('status'))
               <div class="alert alert-success">
@@ -12,15 +11,13 @@
               {{session('filed')}}
               </div>
             @endif
-
-<div>
-  <button type="button" class="btn btn-primary" data-toggle="modal" 
-  data-target="#insert">Tamabah Data</button>
-</div>
-<br>
 <div class="card">
     <div class="card-header">
-      <h3 class="card-title">Data Barang</h3>
+      <h3 class="card-title"><strong>DATA BARANG</strong></h3>
+    </div>
+    <div class="card-header">
+      <button type="button" class="btn btn-primary btn-sm" data-toggle="modal" 
+      data-target="#insert"><i class="fa fa-plus"></i>Tamabah Data</button>
     </div>
     <!-- /.card-header -->
     <div class="card-body">
@@ -69,7 +66,7 @@
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">New message</h5>
+        <h5 class="modal-title" id="exampleModalLabel">Tambah Data</h5>
         <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
