@@ -1,9 +1,12 @@
 <?php
 
+use App\Http\Controllers\BarangController;
 use App\Http\Controllers\BerandaController;
 use App\Http\Controllers\KasirController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\PembelianController;
+use App\Models\Barang;
 use PhpParser\Builder\Function_;
 use PhpParser\Node\Expr\FuncCall;
 
@@ -36,3 +39,8 @@ Route::group(['middleware'=>['auth']],function(){
         Route::resource('kasir',KasirController::class);
     });
 });
+Route::get('barang',[BarangController::class,'index'])->name('barang');
+Route::post('barang/store',[BarangController::class,'store']);
+Route::get('pembelian',[PembelianController::class,'index'])->name('pembelian');
+Route::get('/del_barang{id}', [BarangController::class, 'delete']);
+Route::match(['get', 'post'], '/edit_barang{id}', [BarangController::class,'edit']);
