@@ -67,7 +67,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
     </ul>
   </nav>
   <!-- /.navbar -->
-{{-- <!-- Modal Logout-->
+<!-- Modal Logout-->
 <div class="modal fade" id="logout" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
@@ -84,7 +84,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
       </div>
     </div>
   </div>
-</div> --}}
+</div>
   <!-- Main Sidebar Container -->
   <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->

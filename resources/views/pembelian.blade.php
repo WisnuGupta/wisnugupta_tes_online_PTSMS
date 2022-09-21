@@ -1,4 +1,4 @@
-@extends('beranda')
+@extends('layout')
 @section('content')
 <div class="card">
     <div class="card-header">
@@ -60,4 +60,4 @@
       </table>
     </div>
 </div>
-    @endsection
+@endsection

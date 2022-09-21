@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 class KasirController extends Controller
 {
     public function index(){
-        echo 'Ini Halaman Beranda';
+        echo 'Ini Halaman Kasir';
     }
 
 }
