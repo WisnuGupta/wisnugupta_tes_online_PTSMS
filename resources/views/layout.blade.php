@@ -9,9 +9,13 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
-
+  <meta name="csrf-token" content="({{ csrf_token() }})">
+  <script type="text/javascript">
+      function preventBack(){window.history.forward()};
+      setTimeout("preventBack()",0);
+      window.onunload=function(){null;}
+  </script>
   <title>PT SARANA MEDIA SELULAR</title>
-
   <!-- Font Awesome Icons -->
   <link rel="stylesheet" href="{{asset('/')}}plugins/fontawesome-free/css/all.min.css">
   <!-- Theme style -->
