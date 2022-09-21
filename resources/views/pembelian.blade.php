@@ -2,7 +2,7 @@
 @section('content')
 <div class="card">
     <div class="card-header">
-      <h3 class="card-title">Pembelian</h3>
+      <marquee behavior="" direction=""><strong>INI HALAMAN DATA PEMBELIAN</strong></marquee>
     </div>
     <!-- /.card-header -->
     <div class="card-body">

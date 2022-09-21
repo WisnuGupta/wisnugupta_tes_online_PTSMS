@@ -2,7 +2,7 @@
 @section('content')
 <div class="card">
     <div class="card-header">
-      <h3 class="card-title"><strong>BERANDA</strong></h3>
+      <strong><marquee behavior="" direction="">INI HALAMAN BERANDA</marquee></strong>
     </div>
 </div>   
 <div class="container-fluid">

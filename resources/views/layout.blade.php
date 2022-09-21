@@ -57,38 +57,62 @@ scratch. This page gets rid of all links and provides the needed markup only.
     <ul class="navbar-nav ml-auto">
       <!-- Messages Dropdown Menu -->
       <!-- Notifications Dropdown Menu -->
-      <li class="nav-item">
+      {{-- <li class="nav-item">
         <a class="nav-link" data-widget="control-sidebar" data-slide="true" href="#" role="button">
           <i class="fas fa-th-large"></i></a>
-      </li>
-      <li class="nav-item">
+      </li> --}}
+      {{-- <li class="nav-item">
         <a class="nav-link" href="{{url('logout')}}" role="button" >
           <p>
             Sign Out
           </p>
         </a>
-      </li>
+      </li> --}}
+          <!-- User Account Menu -->
+          <li class="dropdown user user-menu">
+            <!-- Menu Toggle Button -->
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+              <!-- The user image in the navbar-->
+              <img src="dist/img/wisnu.jpg" class="user-image" alt="User Image">
+              <!-- hidden-xs hides the username on small devices so only the image appears. -->
+              <span class="hidden-xs">{{Auth::user()->username}}</span>
+            </a>
+            <ul class="dropdown-menu">
+              <!-- The user image in the menu -->
+              <li class="user-header">
+                <img src="dist/img/wisnu.jpg" class="img-circle" alt="User Image">
+
+                <p>
+                <strong>{{Auth::user()->name}}</strong>
+                </p>
+              </li>
+              <!-- Menu Footer-->
+              <style>
+              #button {
+                background-color: #34495e;
+                width: 100%;
+                padding: 5px 0 10px 0;
+              }
+              #button a{
+                text-decoration: none;
+                color: #ecf0f1;
+                width: 100px;
+                padding: 5px 10px;
+                margin:10px;
+              }
+              </style>
+              <li class="user-footer">
+                <div class="d-grid gap-2" id="button">
+                  <a href="" class="btn btn-primary" style="color: black">Edit</a>
+                  <a href="{{url('logout')}}" class="btn btn-danger" style="color: black"><i class="fas fa-back"></i>Sign Out</a>
+                </div>
+              </li>
+            </ul>
+          </li>
+          <!-- Control Sidebar Toggle Button -->
     </ul>
   </nav>
   <!-- /.navbar -->
-<!-- Modal Logout-->
-<div class="modal fade" id="logout" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Sign Out</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        Apakah anda yakin akan keluar ?
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
-      </div>
-    </div>
-  </div>
-</div>
   <!-- Main Sidebar Container -->
   <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->

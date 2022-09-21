@@ -13,7 +13,7 @@
             @endif
 <div class="card">
     <div class="card-header">
-      <h3 class="card-title"><strong>DATA BARANG</strong></h3>
+   <marquee behavior="" direction=""><strong>INI HALAMAN DATA BARANG</strong></marquee>
     </div>
     <div class="card-header">
       <button type="button" class="btn btn-primary btn-sm" data-toggle="modal" 

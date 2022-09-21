@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\PembelianController;
 use App\Models\Barang;
+use Illuminate\Support\Facades\Auth;
 use PhpParser\Builder\Function_;
 use PhpParser\Node\Expr\FuncCall;
 
@@ -24,6 +25,8 @@ Route::get('/', function () {
     return view('login.view_login');
 });
 
+    // Routes yang mau di revalidate masukan di sini
+    // Route::get('/home', 'HomeController@index');
 // Route::get('login',[LoginController::class,'index'])->name('login');
 Route::controller(LoginController::class)->group(Function(){
     Route::get('login','index')->name('login');
