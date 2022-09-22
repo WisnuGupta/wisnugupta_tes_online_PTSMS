@@ -15,10 +15,23 @@
     <div class="card-header">
    <marquee behavior="" direction=""><strong>INI HALAMAN DATA BARANG</strong></marquee>
     </div>
-    <div class="card-header">
+    <div class="card-header row g-3 ">
+      <div class="col-md-6">
       <button type="button" class="btn btn-primary btn-sm" data-toggle="modal" 
       data-target="#insert"><i class="fa fa-plus"></i>Tamabah Data</button>
     </div>
+      <form class="d-flex col-md-6" action="/barang">
+        <input class="form-control me-2" type="search" name="cari" placeholder="Cari Data .." value="{{ old('cari') }}"><br>
+        <button class="btn btn-outline-success" type="submit"><i class="fa fa-search"></i></button><br>
+        <button type="submit" class="btn btn-outline-danger" onClick="document.location.reload(true)"><i class="fa fa-retweet"></i></button>
+      </form>
+    </div>
+    <script>
+      function reloadpage()
+      {
+      location.reload()
+      }
+      </script><br>
     <!-- /.card-header -->
     <div class="card-body">
       <table class="table table-bordered">
@@ -52,11 +65,7 @@
     </div>
     <div class="card-footer clearfix">
       <ul class="pagination pagination-sm m-0 float-right">
-      <li class="page-item"><a class="page-link" href="#">&laquo;</a></li>
-      <li class="page-item"><a class="page-link" href="#">1</a></li>
-      <li class="page-item"><a class="page-link" href="#">2</a></li>
-      <li class="page-item"><a class="page-link" href="#">3</a></li>
-      <li class="page-item"><a class="page-link" href="#">&raquo;</a></li>
+        {{ $data->links() }}
       </ul>
       </div>
 </div>

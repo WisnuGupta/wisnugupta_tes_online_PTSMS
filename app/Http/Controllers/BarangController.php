@@ -4,12 +4,20 @@ namespace App\Http\Controllers;
 
 use App\Models\Barang;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 
 class BarangController extends Controller
 {
-    public function index(){
-        $data=Barang::all();
+    public function index(Request $request){
+        $data=DB::table('tbl_barang');
+        $cari = $request->cari;
+        $data=DB::table('tbl_barang')->select(
+            'id',
+            'kode_barang',
+            'nama_barang',
+            'harga_barang'
+        )->where('nama_barang', 'like', "%" . $cari. "%")->simplePaginate(5);
         return view('barang',compact('data'));
         }
 

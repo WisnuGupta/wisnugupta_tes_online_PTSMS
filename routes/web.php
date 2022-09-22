@@ -42,6 +42,7 @@ Route::group(['middleware'=>['auth']],function(){
     });
 });
 Route::get('barang',[BarangController::class,'index'])->name('barang');
+// Route::get('barang/cari',[BarangController::class,'index'])->name('barang');
 Route::post('barang/store',[BarangController::class,'store']);
 Route::get('pembelian',[PembelianController::class,'index'])->name('pembelian');
 Route::get('/del_barang{id}', [BarangController::class, 'delete']);
